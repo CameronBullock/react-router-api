@@ -1,3 +1,20 @@
 a {
-  color: #00B7FF;
+  color: #fff !important;
+}
+h1 {
+  border: 7px solid;
+  padding: .5em 0px;
+  text-transform: uppercase;
+  font-weight: 900 !important;
+  letter-spacing: 3px
+}
+.card-image img {
+  height: 400px !important;
+}
+h2 {
+  font-size: 30px !important;
+}
+.video {
+  margin-top: 2em;
+  margin-bottom: 2em;
 }

@@ -8,6 +8,8 @@ const mongoose = require('mongoose');
 mongoose.connect( 'mongodb://localhost/react-express-starter' );
 
 const index = require('./routes/index');
+const videos = require('./routes/videos');
+
 const app = express();
 
 // view engine setup
@@ -24,7 +26,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/materialize', express.static(__dirname + '/node_modules/materialize-css/dist/js/'));
 app.use('/jquery', express.static(__dirname + '/node_modules/materialize-css/node_modules/jquery/dist/'));
 
-app.use('/', index);
+
+app.use('/videos', videos)
+app.use('*', index);
+
+
 
 // catch 404 and forward to error handler
 app.use( (req, res, next) => {
